@@ -1,3 +1,322 @@
+/* CSS reset
+
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+    vertical-align: middle;
+}
+
+/* color 
+
+$color-red: #AA0601
+$color-red-darken: #650300
+$color-red-lighter: #FBF2F2
+
+*/
+
+/* General */
+
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+html, body, .container{
+    font-family: 'Noto Sans TC', 'Roboto', sans-serif;
+    margin: 0 auto;
+    line-height: 1.5;
+    text-align: center;
+}
+
+h1,h2,h3{
+    color:#650300;
+}
+
 h1{
-    color:red;
+    font-size: 64px;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 48px;
+}
+
+.series li h2, .co-brand li h2{
+    font-style: italic;
+    color:#AA0601;
+    background-color: #fff;
+}
+
+h3{
+    font-size: 36px;
+}
+
+h4{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    transition-duration: 0.3s;
+}
+
+a:hover{
+    transform: translate(-3px, -3px);
+}
+
+p{
+    text-align: left;
+}
+
+/* 模組 */
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}.container{
+    width: 1296px;
+}
+
+.btn{
+    background-color: #AA0601;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 20px;
+}
+
+.p-80{
+    padding: 80px 0;
+}
+
+.mb-24{
+    margin-bottom: 24px;
+}
+
+.mr-24{
+    margin-right: 24px;
+}
+
+.mr-48{
+    margin-right: 48px;
+}
+
+.mb-4{
+    margin-bottom: 4px;
+}
+
+/* nav */
+
+.nav{
+    background-color: #AA0601;
+    color: #fff;
+}
+
+.nav .container{
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.nav img{
+    width: 80px;
+}
+
+.nav-list li{
+    padding: 25px 0 25px 64px;
+}
+
+/* header */
+
+.header{
+    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-header.png);
+    background-size: cover;
+    text-align: right;
+    padding: 296px 0;
+}
+
+.header .container{
+    text-align: right;
+}
+
+/* intro */
+
+.intro{
+    background-color:#FBF2F2;
+}
+
+.intro ul{
+    align-items: start;
+}
+
+.intro li{
+    width: 306px;
+}
+
+.intro img{
+    width: 100px;
+}
+
+/* series */
+
+.series img{
+    width: 416px;
+    margin-bottom: 8px;
+}
+
+/* co-brand */
+
+.co-brand{
+    background: url("images/index-bg.png");
+    background-size: cover;
+}
+
+.co-brand h2{
+    color: #fff;
+}
+
+.co-brand img{
+    width: 648px;
+}
+
+/* share */
+
+.share ul{
+    align-items: start;
+}
+
+.share li{
+    border-radius: 4px 4px 0px 0px;
+    border: 1px solid #DEE2E6;
+    box-shadow: 0px 2px 6px #00000029;
+}
+
+.share img{
+    width: 306px;
+}
+
+.share-content{
+    padding: 16px;
+    width: 306px;
+}
+
+.share-content:nth-child(2){
+    padding-bottom: 72px;
+}
+
+/* contact */
+
+.contact{
+    background-color:#FBF2F2;
+}
+
+.contact-list{
+    width: 636px;
+    margin: 0 auto;
+}
+
+.contact-list li{
+    margin-bottom: 16px;
+}
+
+.contact-list p{
+    margin-bottom: 8px;
+}
+
+.contact-list ul input{
+    padding: 6px;
+    padding-left: 12px;
+    width: 100%;
+    border: 1px solid #000;
+    background-color: transparent;
+    color: rgba(0,0,0,0.2);
+}
+
+/* footer */
+
+.footer{
+    background-color: #AA0601;
+    color: #fff;
+    text-align-last: left;
+    padding-top: 60px;
+}
+
+.footer-bar{
+    justify-content: space-between;
+}
+
+.socialMedia img{
+    width: 48px;
+    margin-left: 32px;
+}
+
+.contact-info{
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 14px;
+    letter-spacing: 1.3;
+}
+
+.material-symbols-outlined{
+    display: inline-block;
+    font-size: 36px;
+    padding: 6px;
+    vertical-align: middle;
+}
+
+.copyright{
+    justify-content: space-between;
+    padding: 32px 0;
 }
