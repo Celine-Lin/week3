@@ -73,7 +73,7 @@ html, body, .container{
     text-align: center;
 }
 
-h1,h2,h3{
+h1,h2,h3, h4{
     color:#650300;
 }
 
@@ -142,7 +142,6 @@ p{
 .p-80{
     padding: 80px 0;
 }
-.p-36
 
 .mb-24{
     margin-bottom: 24px;
@@ -246,6 +245,7 @@ p{
     border-radius: 4px 4px 0px 0px;
     border: 1px solid #DEE2E6;
     box-shadow: 0px 2px 6px #00000029;
+    width: 306px;
 }
 
 .share img{
@@ -254,13 +254,15 @@ p{
 
 .share-content{
     padding: 16px;
-    width: 306px;
+    height: 205px;
+    position: relative;
 }
 
 .date{
-    padding-top: 72px;
     color: #707070;
     text-align-last: left;
+    position: absolute;
+    bottom: 16px;
 }
 
 /* contact */
@@ -278,7 +280,8 @@ p{
     margin-bottom: 16px;
 }
 
-.contact-list ul input{
+.contact-list ul input, 
+.contact-list ul textarea{
     padding: 6px;
     padding-left: 12px;
     width: 100%;
@@ -375,12 +378,18 @@ p{
     .co-brand li:nth-child(1){
         margin-bottom: 24px;
     }
+    .co-brand img{
+        width: 100%;
+    }
     /* share */
     .share li:nth-child(1), .share li:nth-child(2){
         margin-bottom: 24px;
     }
     .share li:nth-child(2){
         margin-right: 0;
+    }
+    .share li, .share img{
+        width: 336px;  
     }
     /* contact */
     .contact-list{
@@ -397,4 +406,150 @@ p{
         padding-bottom: 40px;
     }
     
+}
+
+/* mobile */
+
+@media(max-width: 375px){
+
+    /* General */
+
+    .container{
+        padding: 0 14px;
+    }
+    .intro, .series, .co-brand, .share, .contact{
+        padding: 40px 0;
+    }
+    h1, h2{
+        font-size: 24px;
+    }
+    h2{
+        margin-bottom: 24px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    .btn{
+        font-size: 20px;
+        margin: 0;
+    }
+
+    /* nav */
+
+    .nav .container{
+        padding: 0;
+    }
+    .nav img{
+        margin: 16px;
+    }
+    .nav ul{
+        width: 100%;
+        font-size: 16px;
+    }
+    .nav li{
+        width: 50%;
+        padding: 12px 0;
+        border: 1px solid #fff;
+    }
+
+    /* header */
+
+    .header{
+        background-size: contain;
+        padding: 144px 0;
+    }
+
+    /* intro */
+
+    .intro li{
+        margin-bottom: 24px;
+        margin-right: 0;
+    }
+    .intro li:last-child{
+        margin-bottom: 0;
+    }
+
+    /* series */
+
+    .series li h2, .co-brand li h2{
+        font-size: 48px;
+        font-weight: 900;
+    }
+    .series li:last-child{
+        margin-bottom: 0;
+    }
+    .series img{
+        width: 100%;
+    }
+
+    /* share */
+
+    .share li{
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+    .share li:last-child{
+        margin-bottom: 0;
+    }
+
+    /* contact */
+
+    .contact-list{
+        width: 100%;
+        padding: 0 16px;
+    }
+    .contact-list{
+        text-align: left;
+    }
+    .contact-list h2{
+        text-align: center;
+    }
+    #contact-sent{
+        width: 100%;
+        padding: 16px;
+    }
+    label{
+        display: flex;
+        align-items: start;
+    }
+    /* footer */
+    .footer{
+        padding: 0;
+        font-size: 16px;
+        text-align: left;
+    }
+    .footer .container{
+        padding: 0 16px;
+        position: relative;
+    }
+    .contact-info a{
+        font-size: 16px;
+    }
+    .footer-bar{
+        margin: 0;
+    }
+    .footer-bar ul:nth-child(1){
+        display: none;
+    }
+    .socialMedia{
+        position: absolute;
+        right: 16px;
+        top: 24px;
+    }
+    .socialMedia img{
+        width: 24px;
+    }
+    .contact-info{
+        margin-bottom: 24px;
+    }
+    .copyright{
+        padding: 16px 0;
+    }
+    .copyright-right{
+        flex-direction: column;
+        align-items: start;
+    }
+    .copyright p{
+        margin-bottom: 8px;
+    }
 }
