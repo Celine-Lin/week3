@@ -300,6 +300,11 @@ p{
     background-color: #650300 ;
 }
 
+label{
+    display: flex;
+    align-items: start;
+}
+
 /* footer */
 
 .footer{
@@ -508,10 +513,7 @@ p{
         width: 100%;
         padding: 16px;
     }
-    label{
-        display: flex;
-        align-items: start;
-    }
+    
     /* footer */
     .footer{
         padding: 0;
