@@ -129,7 +129,8 @@ p{
     align-items: center;
 
 }.container{
-    width: 1296px;
+    max-width: 1296px;
+    padding: 0 12px;
 }
 
 .btn{
@@ -207,17 +208,17 @@ p{
 }
 
 .intro li{
-    width: 306px;
+    width: 25%;
 }
 
 .intro img{
-    width: 100px;
+    max-width: 33%;
 }
 
 /* series */
 
 .series img{
-    width: 416px;
+    max-width: 100%;
 }
 
 /* co-brand */
@@ -232,7 +233,7 @@ p{
 }
 
 .co-brand img{
-    width: 648px;
+    max-width: 100%;
 }
 
 /* share */
@@ -245,11 +246,11 @@ p{
     border-radius: 4px 4px 0px 0px;
     border: 1px solid #DEE2E6;
     box-shadow: 0px 2px 6px #00000029;
-    width: 306px;
+    width: 25%;
 }
 
 .share img{
-    width: 306px;
+    max-width: 100%;
 }
 
 .share-content{
@@ -272,7 +273,7 @@ p{
 }
 
 .contact-list{
-    width: 636px;
+    width: 40%;
     margin: 0 auto;
 }
 
@@ -291,7 +292,7 @@ p{
 }
 
 #contact-sent{
-    width: 416px; 
+    width: 60%; 
     border:none; 
     margin-top: 48px; 
     cursor: pointer;
@@ -303,6 +304,7 @@ p{
 label{
     display: flex;
     align-items: start;
+    cursor: pointer;
 }
 
 /* footer */
@@ -319,7 +321,7 @@ label{
 }
 
 .socialMedia img{
-    width: 48px;
+    max-width: 50%;
     margin-left: 32px;
 }
 
@@ -344,23 +346,23 @@ label{
 
 /* Tablet */
 
-@media (max-width: 992px){
+@media (max-width: 768px){
 
     .d-flex{
         flex-wrap: wrap;
     }
-
     .container{
         width: 100%;
-        padding: 0 36px;
+        padding: 0 4%;
     }
     /* header */
     .header{
         background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-header-sm.png);
+        background-size: cover;
     }
     /* intro */
     .intro li{
-        width: 336px;
+        width: 48%;
     }
     .intro li:nth-child(1), .intro li:nth-child(2){
         margin-bottom: 24px;
@@ -375,6 +377,7 @@ label{
     .series li{
         margin-bottom: 24px;
         margin-right: 0;
+        width: 48%
     }
     /* co-brand */
     .co-brand h2:last-child{
@@ -383,9 +386,6 @@ label{
     .co-brand li:nth-child(1){
         margin-bottom: 24px;
     }
-    .co-brand img{
-        width: 100%;
-    }
     /* share */
     .share li:nth-child(1), .share li:nth-child(2){
         margin-bottom: 24px;
@@ -393,24 +393,25 @@ label{
     .share li:nth-child(2){
         margin-right: 0;
     }
-    .share li, .share img{
-        width: 336px;  
+    .share li{
+        width: 48%;  
+    }
+    .share img{
+        width: 100%;
     }
     /* contact */
+
     .contact-list{
-        width: 576px;
+       width: 78%;
     }  
-    #contact-sent{
-        width: 336px;
-    }
     /* footer */
     .socialMedia img{
+        width: 40px;
         margin-left: 16px;
     }
     .copyright{
         padding-bottom: 40px;
-    }
-    
+    } 
 }
 
 /* mobile */
@@ -419,9 +420,6 @@ label{
 
     /* General */
 
-    .container{
-        padding: 0 14px;
-    }
     .intro, .series, .co-brand, .share, .contact{
         padding: 40px 0;
     }
@@ -460,7 +458,7 @@ label{
     /* header */
 
     .header{
-        background-size: contain;
+        background-size: cover;
         padding: 144px 0;
     }
 
@@ -469,6 +467,7 @@ label{
     .intro li{
         margin-bottom: 24px;
         margin-right: 0;
+        width: 100%;
     }
     .intro li:last-child{
         margin-bottom: 0;
@@ -476,6 +475,9 @@ label{
 
     /* series */
 
+    .series li{
+        width: 100%;
+    }
     .series li h2, .co-brand li h2{
         font-size: 48px;
         font-weight: 900;
@@ -487,11 +489,17 @@ label{
         width: 100%;
     }
 
+    /* co-brand */
+    img{
+        vertical-align: middle;
+    }
+
     /* share */
 
     .share li{
         margin-right: 0;
         margin-bottom: 24px;
+        width: 100%;
     }
     .share li:last-child{
         margin-bottom: 0;
